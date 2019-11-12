@@ -1,0 +1,20 @@
+{
+  "name": "untitled-todo-list",
+  "version": "0.1.0",
+  "description": "Simple todo list in the style of the list from \"Untitled Goose Game\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bblais23/untitled-todo-list.git"
+  },
+  "keywords": [],
+  "author": "Benjamin Blais <ben.blais6@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bblais23/untitled-todo-list/issues"
+  },
+  "homepage": "https://github.com/bblais23/untitled-todo-list#readme"
+}
