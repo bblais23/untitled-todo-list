@@ -7,6 +7,10 @@
 	float: left;
 }
 
+.untitled-item input[type=checkbox]:focus ~ .todo-text {
+	outline: khaki solid 1px;
+}
+
 .untitled-item input[type=checkbox]:checked ~ .todo-text {
 	text-decoration: line-through;
 }
