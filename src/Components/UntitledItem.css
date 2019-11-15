@@ -1,0 +1,12 @@
+.untitled-item input[type=checkbox] {
+	opacity: 0;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+}
+
+.untitled-item input[type=checkbox]:checked ~ .todo-text {
+	text-decoration: line-through;
+}
