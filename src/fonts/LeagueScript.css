@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'League Script';
+	src: 
+		url('./LeagueScript.woff') format('woff'),
+		url('./LeagueScript.eot') format('embedded-opentype'),
+		url('./LeagueScript.ttf') format('truetype')
+}
