@@ -1,12 +1,29 @@
-
 .listPaper {
 	display: flex;
 	flex-direction: column;
+
+	/* Red line will need to position relative to this container */
+	position: relative;
+
+	/* For the child elements that need left/top margins*/
+	--line-margin: 7em;
+	--top-margin: 5em;
+}
+
+.listPaper::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	border-left: solid palevioletred 0.125em;
+	height: 100%;
+
+	/* Must be the same as the relative*/
+	left: var(--line-margin);
 }
 
 .listPaper h1,
 .listPaper p {
-	padding-left: 5em;
+	padding-left: var(--line-margin);
 }
 
 .listPaper p {
@@ -18,7 +35,7 @@
 }
 
 .listPaper h1 {
-	padding-top: 5em;
+	padding-top: var(--top-margin);
 	border-bottom: solid paleturquoise 0.125em;
 	margin-bottom: 0.25em;
 }
