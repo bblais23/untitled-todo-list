@@ -1,8 +1,13 @@
 import React from 'react';
 
-export default function UntitledItem({children, checked}) {
+export default function UntitledItem({children, checked, enabled}) {
+
+	const textInput = enabled ? 
+		<input type="text" value={children}></input> :
+		<p>{children}</p>;
+
 	return <label>
-		<input type="checkbox" checked={checked}></input>
-		<input type="text" value={children}></input>
+		{!enabled && <input type="checkbox" checked={checked}></input>}
+		{textInput}
 	</label>;
 }
