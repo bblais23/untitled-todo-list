@@ -6,7 +6,7 @@
 	position: relative;
 
 	/* For the child elements that need left/top margins*/
-	--line-margin: 7em;
+	--line-margin: 6em;
 	--top-margin: 5em;
 }
 
