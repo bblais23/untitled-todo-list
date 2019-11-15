@@ -22,15 +22,15 @@
 }
 
 .listPaper h1,
-.listPaper p {
+.listPaper label {
 	padding-left: var(--line-margin);
 }
 
-.listPaper p {
+.listPaper label {
 	border-top: solid paleturquoise 0.125em;
 }
 
-.listPaper p:last-of-type {
+.listPaper label:last-of-type {
 	border-bottom: solid paleturquoise 0.125em;
 }
 
