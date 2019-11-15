@@ -8,6 +8,9 @@
 	/* For the child elements that need left/top margins*/
 	--line-margin: 6em;
 	--top-margin: 5em;
+
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
 }
 
 .listPaper::before {
