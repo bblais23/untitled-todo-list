@@ -1,14 +1,24 @@
-.listContent {
-	grid-area: content;
-}
 
 .listPaper {
-	display: grid;
-	grid-template-areas: 
-		".    .    ."
-		". content ."
-		".    .    ."
-		;
-	grid-template-columns: 8em auto 8em;
-	grid-template-rows: 8em auto 8em;
+	display: flex;
+	flex-direction: column;
+}
+
+.listPaper h1,
+.listPaper p {
+	padding-left: 5em;
+}
+
+.listPaper p {
+	border-top: solid paleturquoise 0.125em;
+}
+
+.listPaper p:last-of-type {
+	border-bottom: solid paleturquoise 0.125em;
+}
+
+.listPaper h1 {
+	padding-top: 5em;
+	border-bottom: solid paleturquoise 0.125em;
+	margin-bottom: 0.25em;
 }
