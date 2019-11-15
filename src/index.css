@@ -13,6 +13,17 @@ h1, h2, h3, h4, p {
 	margin: 0;
 }
 
+input[type="text"] {
+	font-size: 1.25rem;
+	font-family: 'League Script', cursive;
+	font-weight: normal;
+	text-shadow: #AAA 0px 1px 5px;
+	line-height: 1.25em;
+	padding: 0.25em 0;
+	margin: 0;
+	border: none;
+}
+
 body {
 	height: 100vh;
 	width: 100vw;
