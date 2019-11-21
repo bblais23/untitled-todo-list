@@ -33,10 +33,11 @@ export default function UntitledList() {
 		({item, checked}, index) => 
 			<Item
 				setChecked={checked => updateOneItem({item, checked}, index)}
-				key={index} 
+				key={index}
 				checked={checked}>
 				{item}
-			</Item>);
+			</Item>
+	);
 
 	return <main className="listPaper">
 		<h1>to do:</h1>
