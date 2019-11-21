@@ -15,7 +15,7 @@ h1, h2, h3, h4, p {
 }
 
 input[type="text"] {
-	font-size: 1.25rem;
+	font-size: inherit;
 	font-family: 'League Script', cursive;
 	font-weight: normal;
 	text-shadow: #AAA 0px 1px 5px;
