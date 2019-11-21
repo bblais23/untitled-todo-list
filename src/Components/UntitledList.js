@@ -23,13 +23,20 @@ export default function UntitledList() {
 
 	const [todoItems, setTodoItems] = useState(todoItemsDefault);
 
+	const [newItem, setNewItem] = useState();
+
+	const addNewItem = _ => {
+		setTodoItems([...todoItems, {item: newItem, checked: false}]);
+		setNewItem('');
+	}
+
 	const updateOneItem = (updateItem, updateIndex) => 
 		setTodoItems(
 			todoItems.map(
 				(item, index) => 
 					index === updateIndex ? updateItem : item));
 
-	const items = todoItems.map( 
+	const items = todoItems.map(
 		({item, checked}, index) => 
 			<Item
 				setChecked={checked => updateOneItem({item, checked}, index)}
@@ -42,5 +49,13 @@ export default function UntitledList() {
 	return <main className="listPaper">
 		<h1>to do:</h1>
 		{items}
+		<label className="addNew">
+			<input 
+				type="text"
+				value={newItem}
+				onChange={e => setNewItem(e.target.value)}
+			/>
+			<button onClick={addNewItem}>+</button>
+		</label>
 	</main>;
 }

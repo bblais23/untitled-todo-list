@@ -41,3 +41,21 @@
 	border-bottom: solid paleturquoise 0.125em;
 	margin-bottom: 0.25em;
 }
+
+.addNew input[type=text] {
+	background: none;
+
+	border-bottom: solid palevioletred 0.125em;
+}
+
+.addNew button {
+	font-size: inherit;
+	padding: 0;
+	margin: 0;
+	height: 1.75em;
+	width: 1.75em;
+	display: inline-block;
+	background: none;
+	border: solid black 0.125em;
+	border-radius: 0.875em;
+}
