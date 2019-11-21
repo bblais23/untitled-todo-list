@@ -7,6 +7,34 @@
 	float: left;
 }
 
+.untitled-item button {
+
+	cursor: pointer;
+
+	font-size: inherit;
+	float: right;
+	margin: auto 0.5em;
+
+	padding: 0;
+	width: 1.5em;
+	height: 1.5em;
+	background: none;
+
+	border: black solid 0.125em;
+	color: black;
+
+	border-radius: 0.75em;
+
+	transition: opacity linear 0.5s;
+
+	/* Make invisible unless hovering */
+	opacity: 0.25;
+}
+
+.untitled-item button:hover {
+	opacity: 1;
+}
+
 .untitled-item input[type=checkbox]:focus ~ .todo-text {
 	outline: khaki solid 1px;
 }
