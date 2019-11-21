@@ -4,42 +4,19 @@ import Item from './UntitledItem';
 
 import './UntitledList.css';
 
-const todoItemsDefault = [
-	{
-		item: 'create todo list',
-		checked: true,
-	},
-	{
-		item: 'store items locally',
-		checked: false,
-	},
-	{
-		item: 'list in prod',
-		checked: false,
-	},
-]
-
-export default function UntitledList() {
-
-	const [todoItems, setTodoItems] = useState(todoItemsDefault);
+export default function UntitledList({items, addItem, checkItem}) {
 
 	const [newItem, setNewItem] = useState();
 
 	const addNewItem = _ => {
-		setTodoItems([...todoItems, {item: newItem, checked: false}]);
+		addItem({item: newItem, checked: false});
 		setNewItem('');
 	}
 
-	const updateOneItem = (updateItem, updateIndex) => 
-		setTodoItems(
-			todoItems.map(
-				(item, index) => 
-					index === updateIndex ? updateItem : item));
-
-	const items = todoItems.map(
+	const itemsComponents = items.map(
 		({item, checked}, index) => 
 			<Item
-				setChecked={checked => updateOneItem({item, checked}, index)}
+				setChecked={checked => checkItem(index, checked)}
 				key={index}
 				checked={checked}>
 					{item}
@@ -48,7 +25,7 @@ export default function UntitledList() {
 
 	return <main className="listPaper">
 		<h1>to do:</h1>
-		{items}
+		{itemsComponents}
 		<label className="addNew">
 			<input 
 				type="text"
