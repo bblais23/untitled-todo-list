@@ -1,25 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
+import useLocalStorageState from './Hooks/useLocalStorageState';
 
 import UntitledList from './Components/UntitledList';
 
-const todoItemsDefault = [
-	{
-		item: 'create todo list',
-		checked: true,
-	},
-	{
-		item: 'store items locally',
-		checked: false,
-	},
-	{
-		item: 'list in prod',
-		checked: false,
-	},
-];
-
 export default function App() {
 
-	const [todoItems, setTodoItems] = useState(todoItemsDefault);
+	const [todoItems, setTodoItems] = useLocalStorageState('untitledTodo',[]);
 
 	const addNewItem = item => 
 		setTodoItems([...todoItems, item]);
