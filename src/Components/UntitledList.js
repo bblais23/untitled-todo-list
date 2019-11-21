@@ -35,7 +35,7 @@ export default function UntitledList() {
 				setChecked={checked => updateOneItem({item, checked}, index)}
 				key={index}
 				checked={checked}>
-				{item}
+					{item}
 			</Item>
 	);
 
